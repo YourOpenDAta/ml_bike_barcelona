@@ -10,7 +10,6 @@ curl -v  orion:1026/ngsi-ld/v1/subscriptions/ -s -S -H 'Content-Type: applicatio
       "predictionId",
       "socketId",
       "idStation",
-      "month",
       "hour",
       "weekday"
     ],
