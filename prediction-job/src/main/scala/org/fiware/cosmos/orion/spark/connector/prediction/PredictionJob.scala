@@ -29,7 +29,7 @@ case class PredictionRequest(id_estacion: Int, Ultima_medicion: Int, Seishora_an
 object PredictionJob {
 
   final val variationStations = load_data1()
-  final val URL_CB = "http://orion:1026/ngsi-ld/v1/entities/urn:ngsi-ld:ReqBarcelonaBikePrediction1/attrs"
+  final val URL_CB = "http://orion:1026/ngsi-ld/v1/entities/urn:ngsi-ld:ResBarcelonaBikePrediction1/attrs"
   final val CONTENT_TYPE = ContentType.JSON
   final val METHOD = HTTPMethod.PATCH
   final val BASE_PATH = "./prediction-job"
