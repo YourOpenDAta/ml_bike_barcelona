@@ -22,11 +22,11 @@ under the License.
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.fiware.cosmos</groupId>
-	<artifactId>orion.spark.connector.prediction.santander.bike</artifactId>
+	<artifactId>orion.spark.connector.prediction.barcelona.bike</artifactId>
 	<version>1.0.1</version>
 	<packaging>jar</packaging>
 
-	<name>Fiware Orion Cosmos Spark Connector Prediction For Bikes in Santander</name>
+	<name>Fiware Orion Cosmos Spark Connector Prediction For Bikes in Barcelona</name>
 	<url>https://www.fiware.org/</url>
 
 	<repositories>

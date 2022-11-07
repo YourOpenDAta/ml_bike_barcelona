@@ -21,7 +21,7 @@ class S():
 
 if __name__ == "__main__":
     print("=================================")
-    print("Generating santander bike JAR")
+    print("Generating Barcelona bike JAR")
     print("=================================")
     S().execute_maven()
 

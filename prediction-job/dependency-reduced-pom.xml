@@ -2,8 +2,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.fiware.cosmos</groupId>
-  <artifactId>orion.spark.connector.prediction.santander.bike</artifactId>
-  <name>Fiware Orion Cosmos Spark Connector Prediction For Bikes in Santander</name>
+  <artifactId>orion.spark.connector.prediction.barcelona.bike</artifactId>
+  <name>Fiware Orion Cosmos Spark Connector Prediction For Bikes in Barcelona</name>
   <version>1.0.1</version>
   <url>https://www.fiware.org/</url>
   <build>

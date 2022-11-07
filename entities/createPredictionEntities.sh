@@ -1,7 +1,7 @@
 curl orion:1026/ngsi-ld/v1/entities -s -S -H 'Content-Type: application/ld+json' -d @- <<EOF
 {
-    "id": "urn:ngsi-ld:ReqSantanderBikePrediction1",
-    "type": "ReqSantanderBikePrediction",
+    "id": "urn:ngsi-ld:ReqBarcelonaBikePrediction1",
+    "type": "ReqBarcelonaBikePrediction",
     "predictionId": {
         "value": 0,
         "type": "Property"
@@ -36,8 +36,8 @@ EOF
 
 curl orion:1026/ngsi-ld/v1/entities -s -S -H 'Content-Type: application/ld+json' -d @- <<EOF
 {
-  "id": "urn:ngsi-ld:ResSantanderBikePrediction1",
-  "type": "ResSantanderBikePrediction",
+  "id": "urn:ngsi-ld:ResBarcelonaBikePrediction1",
+  "type": "ResBarcelonaBikePrediction",
   "predictionId": {
     "value": "0",
     "type": "Property"
@@ -59,10 +59,6 @@ curl orion:1026/ngsi-ld/v1/entities -s -S -H 'Content-Type: application/ld+json'
     "type": "Property"
   },
   "hour": {
-    "value": 0,
-    "type": "Property"
-  },
-  "month": {
     "value": 0,
     "type": "Property"
   },

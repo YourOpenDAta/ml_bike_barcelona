@@ -4,3 +4,5 @@ prediction-job/bin
 prediction-job/*.csv
 .env
 other_docs
+resto-map.txt
+array.txt

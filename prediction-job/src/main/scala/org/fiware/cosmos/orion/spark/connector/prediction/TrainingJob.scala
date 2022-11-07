@@ -20,15 +20,15 @@ object TrainingJob {
       Array(StructField("bicicletas_disponibles", IntegerType),
             StructField("id_estacion", IntegerType),
             StructField("Ultima_medicion", IntegerType),
-            StructField("Diezhora_anterior", IntegerType),
+            StructField("Seishora_anterior", IntegerType),
+            StructField("Nuevehora_anterior", IntegerType),
             StructField("dia", IntegerType),
-            StructField("num_mes", IntegerType),
             StructField("hora", IntegerType),
             StructField("variacion_estaciones", DoubleType)                 
       ))
     val spark = SparkSession
       .builder
-      .appName("TrainingBikeSantander")
+      .appName("TrainingBikeBarcelona")
       .master("local[*]")
       .getOrCreate()
 
@@ -40,11 +40,11 @@ object TrainingJob {
       .schema(schema)
       .option("header", "true")
       .option("delimiter", ",")
-      .load("./prediction-job/santander_bike.csv")
+      .load("./prediction-job/barcelona_bike.csv")
 
               
     val vectorAssembler  = new VectorAssembler()
-      .setInputCols(Array("id_estacion", "Ultima_medicion", "Diezhora_anterior","dia","num_mes","hora","variacion_estaciones"))
+      .setInputCols(Array("id_estacion", "Ultima_medicion", "Seishora_anterior","Nuevehora_anterior","dia","hora","variacion_estaciones"))
       .setOutputCol("features")
 
 
@@ -59,7 +59,7 @@ object TrainingJob {
     val model = pipeline.fit(trainingData)
     val predictions = model.transform(testData)
 
-    predictions.select("prediction","bicicletas_disponibles", "id_estacion", "dia","num_mes","hora").show(10)
+    predictions.select("prediction","bicicletas_disponibles", "id_estacion", "dia","hora").show(10)
 
     model
   }

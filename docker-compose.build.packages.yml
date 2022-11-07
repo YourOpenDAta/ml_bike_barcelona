@@ -1,8 +1,8 @@
 version: "3.5"
 services:
-  maven-bike-santander:
+  maven-bike-barcelona:
     build: ./prediction-job
-    container_name: maven_generate_packages-bike-santander
+    container_name: maven_generate_packages-bike-barcelona
     expose:
       - "8099"
     ports:
