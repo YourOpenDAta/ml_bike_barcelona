@@ -4,7 +4,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		bzip2 \
 		unzip \
 		xz-utils \
-	&& rm -rf /var/lib/apt/lists/* #redo
+	&& rm -rf /var/lib/apt/lists/* 
 
 # Default to UTF-8 file.encoding
 ENV LANG C.UTF-8
@@ -17,7 +17,7 @@ RUN { \
 		echo; \
 		echo 'dirname "$(dirname "$(readlink -f "$(which javac || which java)")")"'; \
 	} > /usr/local/bin/docker-java-home \
-	&& chmod +x /usr/local/bin/docker-java-home
+	&& chmod +x /usr/local/bin/docker-java-home #redo
 
 # do some fancy footwork to create a JAVA_HOME that's cross-architecture-safe
 RUN ln -svT "/usr/lib/jvm/java-8-openjdk-$(dpkg --print-architecture)" /docker-java-home
